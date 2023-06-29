@@ -1,0 +1,94 @@
+$white: #FFFFFF;
+$white-culture: #F5F5F5;
+$orange-terra: #E2725B;
+$brown-antique: #CD9575;
+$pink-blur: #C5977A;
+$black-raisin: #1E1E24;
+$black-background: rgba(245, 245, 245, 0);
+$blue-han: #446CCF;
+$black: #000000;
+$dark-gray: #686969;
+$basic-gray: rgba(245, 245, 245, 0.65);
+$input-gray: rgba(30, 30, 35, 0.35);
+$semi-gray: rgba(30, 30, 35, 0.5);
+$input-dark-gray: rgba(30, 30, 35, 0.65);
+@mixin font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+@mixin font-inter {
+    font-family: 'Inter', sans-serif;
+}
+@mixin d-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin p-relative-10{
+    position: relative;
+    z-index: 10;
+}
+@mixin p-absolute-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: '';
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+@mixin padding-left-follow-container{
+    padding-left: calc( (100vw - 1320px) / 2);
+    @media screen and (max-width: 1500px){
+        padding-left: calc( (100vw - 1140px) / 2);
+    }
+    @media (max-width: 1200px){
+        padding-left: calc( (100vw - 960px) / 2);
+    }
+    @media (max-width: 992px){
+        padding-left: calc( (100vw - 720px) / 2);
+    }
+    @media (max-width: 768px){
+        padding-left: 0;
+    }
+    @media (max-width: 595px){
+        padding:0 15px;
+    }
+}
+@mixin padding-right-follow-container{
+    padding-right: calc( (100vw - 1320px) / 2);
+    @media (max-width: 1400px){
+        padding-right: calc( (100vw - 1140px) / 2);
+    }
+    @media (max-width: 1200px){
+        padding-right: calc( (100vw - 960px) / 2);
+    }
+    @media (max-width: 992px){
+        padding-right: calc( (100vw - 720px) / 2);
+    }
+    @media (max-width: 768px){
+        padding-right: calc( (100vw - 540px) / 2);
+    }
+    @media (max-width: 595px){
+        padding-right: 15px;
+    }
+}
+
+@mixin left-line-orange{
+    position: absolute;
+    left: 0;
+    content: '';
+    background: linear-gradient(90deg, #C5977A 0%, rgba(197, 151, 122, 0) 100%);
+
+    height: 2px;
+}
+@mixin right-line-black{
+    position: absolute;
+    right: 0;
+    content: '';
+    background: linear-gradient(270deg, #1E1E23 0%, rgba(30, 30, 35, 0) 100%);
+
+    height: 2px;
+}
